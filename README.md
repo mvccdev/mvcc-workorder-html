@@ -2,7 +2,7 @@
 
 # Github Repo Template
 
-This template is used to create other GitHub repositories used by the college. Please ignore the remainder of this README.
+The SharePoint work order form that uses Stratus Forms Lite.
 
 [Documentation](doc/toc.md)
 
@@ -11,10 +11,6 @@ This template is used to create other GitHub repositories used by the college. P
 A basic understanding of the following skills are necessary to use this project.
 
 * [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
-* [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
-* [ES6](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-* [OOCSS](https://www.keycdn.com/blog/oocss)
-* [BEM](https://en.bem.info/)
 
 ## Tool Dependencies
 

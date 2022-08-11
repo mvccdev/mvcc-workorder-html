@@ -1,0 +1,281 @@
+<!--#links-->
+
+<link  type="text/css" rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/themes/start/jquery-ui.css" />
+<link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/fabric.min.css">
+<link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css">
+
+<!--#scripts-->
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.SPServices/0.7.2/jquery.SPServices-0.7.2.min.js"></script>
+
+<!--#jquery-->
+
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$().StratusFormsLight();
+	});
+</script>
+
+<!--#styles-->
+
+<style>
+	/* ======================================================================
+	   #generic.headings
+	   ====================================================================== */
+
+	h1 {
+		font-size: 2rem;
+		color: #393;
+	}
+
+	/* ======================================================================
+	   #objects.grid
+	   ====================================================================== */
+
+	/**
+	 * The grid object is used to create common grid patterns.
+	 *
+	 * Usage:
+	 *
+	 * <div class="mvcc-grid mvcc-grid--gutter-medium mvcc-grid--layout-2-column">
+	 *     <div></div>
+	 *     <div></div>
+	 * </div>
+	 */
+	.mvcc-grid {
+		display: grid;
+	}
+
+	.mvcc-grid--gutter-medium {
+		grid-gap: 1.5rem;
+	}
+
+	.mvcc-grid--layout-left-sidebar {
+		grid-template-columns: 1fr 3fr;
+	}
+
+	.mvcc--text-required {
+		font-weight: bold;
+		color: #FF0000;
+	}
+</style>
+
+<h1>Work Study Form</h1>
+
+<!--#layout-->
+
+<div class="mvcc-grid mvcc-grid--gutter-medium mvcc-grid--layout-left-sidebar">
+
+	<!--@field: Student Name-->
+
+	<div>
+		Student Name:
+		<span class="mvcc--text-required">*</span>
+	</div>
+
+	<div>
+		<span class="StratusFormsTemplate" data-FormField="Student Name"></span>
+	</div>
+
+	<!--@field: Phone Number-->
+
+	<div>
+		Phone Number:
+		<span class="mvcc--text-required">*</span>
+	</div>
+
+	<div>
+		<span class="StratusFormsTemplate" data-FormField="Phone"></span>
+	</div>
+
+	<!--@field: Year-->
+
+	<div>
+		Year:
+		<span class="mvcc--text-required">*</span>
+	</div>
+
+	<div>
+		<span class="StratusFormsTemplate" data-FormField="Year"></span>
+	</div>
+
+	<!--@field: Semester-->
+
+	<div>
+		What Semesters are you requesting Federal Work-Study Funding?
+		<span class="mvcc--text-required">*</span>
+	</div>
+
+	<div>
+		<span class="StratusFormsTemplate" data-FormField="Semester"></span>
+	</div>
+
+	<!--@field: minimum-->
+
+	<div>
+		You must be registered in a minimum of 6 credits during the fall
+		and/or spring semester, or 3 credits during the summer semester that
+		go toward your declared program.
+		<span class="mvcc--text-required">*</span>
+	</div>
+
+	<div>
+		<span class="StratusFormsTemplate" data-FormField="minimum"></span>
+	</div>
+
+	<!--@field: progress-->
+
+	<div>
+		You must maintain satisfactory academic progress. For more information, see
+		<a href="https://www.morainevalley.edu/satisfactory-academic-progress">
+		Satisfactory Academic Progress</a> or log into MVConnect to check
+		your status on Financial Aid Self-Service.
+		<span class="mvcc--text-required">*</span>
+	</div>
+
+	<div>
+		<span class="StratusFormsTemplate" data-FormField="progress"></span>
+	</div>
+
+	<!--@field: aid-->
+
+	<div>
+		Your financial aid file must be complete and you must have unmet need in
+		order to receive the award.
+		<span class="mvcc--text-required">*</span>
+	</div>
+
+	<div>
+		<span class="StratusFormsTemplate" data-FormField="aid"></span>
+	</div>
+
+	<!--@field: loans-->
+
+	<div>
+		Loans may be reduced or cancelled in order to receive this award.
+		<span class="mvcc--text-required">*</span>
+	</div>
+
+	<div>
+		<span class="StratusFormsTemplate" data-FormField="loans"></span>
+	</div>
+
+	<!--@field: secure-->
+
+	<div>
+		You must secure a position within 4 weeks of applying to the federal
+		work-study (FWS) program. Failure to secure employment by the fourth
+		week will terminate your award each semester.
+		<span class="mvcc--text-required">*</span>
+	</div>
+
+	<div>
+		<span class="StratusFormsTemplate" data-FormField="secure"></span>
+	</div>
+
+	<!--@field: waitlist-->
+
+	<div>
+		FWS funding is limited. If funds are not available, you will be place on
+		a waitlist and notified should funds become available.
+		<span class="mvcc--text-required">*</span>
+	</div>
+
+	<div>
+		<span class="StratusFormsTemplate" data-FormField="waitlist"></span>
+	</div>
+
+	<!--@field: responsibility-->
+
+	<div>
+		An award does not guarantee employment. It is your responsibility to
+		apply for jobs and complete hiring process.
+		<span class="mvcc--text-required">*</span>
+	</div>
+
+	<div>
+		<span class="StratusFormsTemplate" data-FormField="responsibility"></span>
+	</div>
+
+	<!--@field: jrc-->
+
+	<div>
+		Upon hiring, you must meet with a Job Resource Center representative and
+		complete the hiring process.
+		<span class="mvcc--text-required">*</span>
+	</div>
+
+	<div>
+		<span class="StratusFormsTemplate" data-FormField="jrc"></span>
+	</div>
+
+	<!--@field: orientation-->
+
+	<div>
+		You must attend student employment orientation within three weeks of
+		date of hire.
+		<span class="mvcc--text-required">*</span>
+	</div>
+
+	<div>
+		<span class="StratusFormsTemplate" data-FormField="orientation"></span>
+	</div>
+
+	<!--@field: exceed-->
+
+	<div>
+		You are responsible for monitoring your earnings and hours. You	cannot
+		earn more than your award each term. If you earn more thanyour award,
+		this could result in termination.
+		<span class="mvcc--text-required">*</span>
+	</div>
+
+	<div>
+		<span class="StratusFormsTemplate" data-FormField="exceed"></span>
+	</div>
+
+	<!--@field: share-->
+
+	<div>
+		I authorize the Financial aid office at Moraine Valley Community College
+		to share my Federal Work-Study eligibility with MVCC Staff throughout
+		the campus via the MVConnect portal.
+		<span class="mvcc--text-required">*</span>
+	</div>
+
+	<div>
+		<span class="StratusFormsTemplate" data-FormField="share"></span>
+	</div>
+
+	<!--@field: Hours Requested-->
+
+	<div>
+		Number of hours requested per week for work-study:
+		<span class="mvcc--text-required">*</span>
+	</div>
+
+	<div>
+		<span class="StratusFormsTemplate" data-FormField="Hours Requested"></span>
+	</div>
+
+	<!--@field: existingWorkStudy-->
+
+	<div>
+		Are you currently working as a student worker and currently being paid
+		out of your department’s budget?
+		<span class="mvcc--text-required">*</span>
+	</div>
+
+	<div>
+		<span class="StratusFormsTemplate" data-FormField="existingWorkStudy"></span>
+	</div>
+
+</div>
+
+<!--@field: title (hidden)-->
+
+<div style="display:none">
+	<span class="StratusFormsTemplate" data-FormField="Title"></span>
+</div>

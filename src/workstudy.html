@@ -1,8 +1,6 @@
 <!--#links-->
 
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/themes/start/jquery-ui.css" />
-<link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/fabric.min.css">
-<link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css">
 
 <!--#scripts-->
 
@@ -10,6 +8,7 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.SPServices/0.7.2/jquery.SPServices-0.7.2.min.js"></script>
 <script type="text/javascript" src="/resources/SiteAssets/stratus-forms-1.55.js"></script>
+
 <!--#jquery-->
 
 <script type="text/javascript">
@@ -21,6 +20,12 @@
 <!--#styles-->
 
 <style>
+	/**
+	 * Due to the Ellucian Master Page network footprint, we are not loading
+	 * the mvcc-objects.css. Instead, we are adding these classes on an "as
+	 * needed" basis per form.
+	 */
+
 	/* ======================================================================
 	   #generic.headings
 	   ====================================================================== */
@@ -56,21 +61,78 @@
 		grid-template-columns: 1fr 3fr;
 	}
 
+	/* ======================================================================
+	   #objects.box
+	   ====================================================================== */
+
+	/**
+	 * The box object is used to box off content from the rest of the page.
+	 *
+	 * Usage:
+	 *
+	 * <div class="mvcc-grid mvcc-grid--gutter-medium mvcc-grid--layout-2-column">
+	 *     <div></div>
+	 *     <div></div>
+	 * </div>
+	 */
+	.mvcc-box {
+		display: block;
+		margin-bottom: 1.5rem;
+	}
+
+	.mvcc-box--agree {
+		padding: .75rem;
+		font-family: Roboto Condensed, sans-serif;
+	    font-size: 1.2rem;
+	    font-weight: 400;
+		color: #fff;
+		background-color: #4b5049;
+	}
+	/* ======================================================================
+	   #utilities.margin
+	   ====================================================================== */
+
+	/**
+	 * Applies a margin to various elements.
+	 *
+	 * Usage:
+	 *
+	 * <span class="mvcc--margin-bottom-xxx"></span>
+	 */
+	.mvcc--margin-bottom-medium {
+		margin-bottom: 1.5rem;
+	}
+
+	/* ======================================================================
+	   #utilities.text
+	   ====================================================================== */
+
+	/**
+	 * Applies misc styles to different types of text.
+	 *
+	 * Usage:
+	 *
+	 * <span class="mvcc--text-required"></span>
+	 */
 	.mvcc--text-required {
 		font-weight: bold;
-		color: #FF0000;
+		color: #ff0000;
 	}
 </style>
 
-<h1>Work Study Form</h1>
+<!--#title-->
 
-<!--#layout-->
+<h1 class="mvcc--margin-bottom-medium">
+	Work Study Form
+</h1>
+
+<!--#general-->
 
 <div class="mvcc-grid mvcc-grid--gutter-medium mvcc-grid--layout-left-sidebar">
 
 	<!--@field: Student Name-->
 
-	<div>
+	<div class="mvcc-divider">
 		Student Name:
 		<span class="mvcc--text-required">*</span>
 	</div>
@@ -92,7 +154,7 @@
 
 	<!--@field: Year-->
 
-	<div>
+	<div class="mvcc-divider">
 		Year:
 		<span class="mvcc--text-required">*</span>
 	</div>
@@ -100,6 +162,17 @@
 	<div>
 		<span class="StratusFormsTemplate" data-FormField="Year"></span>
 	</div>
+</div>
+
+<!--#agreement box-->
+
+<div class="mvcc-box mvcc-box--agree">
+	Select Yes to Confirm that you Understand Each of the following Eligibility Requirements
+</div>
+
+<!--#agreement form-->
+
+<div class="mvcc-grid mvcc-grid--gutter-medium mvcc-grid--layout-left-sidebar">
 
 	<!--@field: Semester-->
 

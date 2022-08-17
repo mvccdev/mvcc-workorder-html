@@ -30,6 +30,12 @@
 	   #generic.headings
 	   ====================================================================== */
 
+	/**
+	 * These are so overscopped due to Microsoft. h2 loses in the specificity
+	 * battle. As a general rule we avoid !important due to its weight, but
+	 * we are stuck here.
+	 */
+
 	h1 {
 		font-size: 2rem;
 		color: #393;
@@ -40,7 +46,7 @@
 		font-family: Roboto Condensed, sans-serif;
 	    font-size: 1.2rem;
 	    font-weight: 400;
-		color: #fff;
+		color: #fff !important;
 		background-color: #4b5049;
 	}
 
@@ -364,9 +370,10 @@
 		<span class="StratusFormsTemplate" data-FormField="Class Roster"></span>
 
 		<p class="mvcc--text-note">
-			Provide only the names of the student(s) approved to take the test.
-			This can be found in your course on Canvas or you may type the names
-			in manually.
+			Provide only the names of the student(s) approved to take the test in
+			the Testing Center. This can be found in your course on Canvas or you
+			may type the names in manually. <strong>Full class exams are not permitted
+			and will not be processed</strong>.
 		</p>
 	</div>
 </div>

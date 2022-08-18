@@ -14,14 +14,14 @@
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
 		$().StratusFormsLight();
+ 	});
 
-		//
-		// @fix: StratusForms is not focusing on the top of the page!
-		//
-		setInterval(() => {
-			window.scrollTo(0, 0);
-		}, 1000);
-	});
+	//
+	// @fix: StratusForms is not focusing on the top of the page!
+	//
+	setTimeOut(() => {
+		window.scrollTo(0, 0);
+	}, 1000);
 </script>
 
 <!--#styles-->

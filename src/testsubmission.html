@@ -13,15 +13,20 @@
 
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
-		$().StratusFormsLight();
- 	});
 
-	//
-	// @fix: StratusForms is not focusing on the top of the page!
-	//
-	setTimeOut(() => {
-		window.scrollTo(0, 0);
-	}, 1000);
+		$().StratusFormsLight();
+
+		//
+		// @fix: StratusForms is not focusing on the top of the page.
+		//
+	    $('html, body').scrollTop(0);
+
+		$(window).on('load', function() {
+			setTimeout(function() {
+				$('html, body').scrollTop(0);
+			}, 0);
+		});
+ 	});
 </script>
 
 <!--#styles-->
@@ -400,3 +405,11 @@
 	<span class="StratusFormsTemplate" data-FormField="Staff"></span>
 	<span class="StratusFormsTemplate" data-FormField="Test Number"></span>
 </div>
+
+<!--#back-to-top-->
+
+<p>
+	<a href="javascript:window.scrollTo(0, 0)">
+		Back to top
+	</a>
+</p>
